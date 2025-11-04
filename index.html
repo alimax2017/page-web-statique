@@ -3,24 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Boutique de Meubles — Accueil</title>
+  <title>Ma Boutique de Meubles</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="brand">🪑 Ma Boutique de Meubles</h1>
-      <!-- Hamburger button -->
-      <button class="hamburger" id="hamburger">
-        ☰
-      </button>
+      <button class="hamburger" id="hamburger">☰</button>
       <nav class="nav" id="navMenu">
-        <a href="#salon">Salon</a>
-        <a href="#chambre">Chambre</a>
-        <a href="#cuisine">Cuisine</a>
-        <a href="#jardin">Jardin</a>
-        <a href="#decoration">Décoration</a>
-        <button id="cartBtn" class="cart-btn">Panier (<span id="cart-count">0</span>)</button>
+        <a href="salon.html">Salon</a>
+        <a href="chambre.html">Chambre</a>
+        <a href="cuisine.html">Cuisine</a>
+        <a href="jardin.html">Jardin</a>
+        <a href="decoration.html">Décoration</a>
       </nav>
     </div>
   </header>
@@ -30,57 +26,27 @@
       <div class="container hero-inner">
         <div class="hero-text">
           <h2>Design & Confort</h2>
-          <p>Découvrez notre sélection de meubles élégants, durables et faits pour durer.</p>
-          <a href="#catalog" class="btn-primary">Voir le catalogue</a>
+          <p>Des meubles élégants et durables pour chaque pièce de votre maison.</p>
+          <a href="salon.html" class="btn-primary">Explorer nos collections</a>
         </div>
         <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1582582494706-5b8b1da6b7b0?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8c3a7b9f0b3c7d2d9c1f2a0b6d8b1c1e" alt="Salon design">
+          <img src="static/images/maison.jpg" alt="Salon moderne">
         </div>
       </div>
-    </section>
-
-    <section id="catalog" class="container catalog">
-      <h2 class="section-title">Nos Meubles</h2>
-      <div class="grid" id="products">
-        <!-- tes produits ici -->
-      </div>
-    </section>
-
-    <section id="about" class="container about">
-      <h2 class="section-title">À propos</h2>
-      <p>Nous sélectionnons des meubles de qualité pour sublimer votre intérieur. Livraison rapide et service client réactif.</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Ma Boutique de Meubles — Tous droits réservés</p>
+      <p>© <span id="year"></span> Ma Boutique de Meubles</p>
     </div>
   </footer>
 
-  <!-- Panier modal -->
-  <div id="cartModal" class="modal hidden">
-    <div class="modal-content">
-      <button class="close-btn" id="closeCart">&times;</button>
-      <h3>Votre panier</h3>
-      <div id="cartItems"></div>
-      <div class="cart-summary">
-        <strong>Total :</strong> <span id="cartTotal">0</span> €
-      </div>
-      <div class="cart-actions">
-        <button id="checkoutBtn" class="btn-primary">Procéder au paiement</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
   <script>
-    // JS pour le menu hamburger
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("hamburger").onclick = () => {
+      document.getElementById("navMenu").classList.toggle("active");
+    };
   </script>
 </body>
 </html>

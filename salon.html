@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Salon | Ma Boutique de Meubles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">🪑 Ma Boutique de Meubles</h1>
+      <button class="hamburger" id="hamburger">☰</button>
+      <nav class="nav" id="navMenu">
+        <a href="index.html">Accueil</a>
+        <a href="salon.html" class="active">Salon</a>
+        <a href="chambre.html">Chambre</a>
+        <a href="cuisine.html">Cuisine</a>
+        <a href="jardin.html">Jardin</a>
+        <a href="decoration.html">Décoration</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container catalog">
+    <h2 class="section-title">Salon</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="static/images/meuble1.JPG" alt="Canapé en cuir">
+        <h3>Canapé en cuir</h3>
+        <p>Un canapé luxueux en cuir véritable, pour une touche d’élégance.</p>
+        <span class="price">899 €</span>
+        <div class="buttons">
+          <button class="btn-detail">Détails</button>
+          <button class="btn-cart">Ajouter au panier</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="static/images/meuble3.JPG" alt="Chaise scandinave">
+        <h3>Chaise scandinave</h3>
+        <p>Design nordique et confort optimal pour votre salon.</p>
+        <span class="price">179 €</span>
+        <div class="buttons">
+          <button class="btn-detail">Détails</button>
+          <button class="btn-cart">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Ma Boutique de Meubles</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("hamburger").onclick = () => {
+      document.getElementById("navMenu").classList.toggle("active");
+    };
+    // Simule un ajout au panier
+    document.querySelectorAll(".btn-cart").forEach(b => {
+      b.onclick = () => alert("✅ Produit ajouté au panier !");
+    });
+  </script>
+  <script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("hamburger").onclick = () => {
+  document.getElementById("navMenu").classList.toggle("active");
+};
+document.querySelectorAll(".btn-cart").forEach(b => {
+  b.onclick = () => alert("✅ Produit ajouté au panier !");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Décoration | Ma Boutique de Meubles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">🪑 Ma Boutique de Meubles</h1>
+      <button class="hamburger" id="hamburger">☰</button>
+      <nav class="nav" id="navMenu">
+        <a href="index.html">Accueil</a>
+        <a href="salon.html">Salon</a>
+        <a href="chambre.html">Chambre</a>
+        <a href="cuisine.html">Cuisine</a>
+        <a href="jardin.html">Jardin</a>
+        <a href="decoration.html" class="active">Décoration</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container catalog">
+    <h2 class="section-title">Décoration</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1602526218930-6a66cb972f0e?auto=format&fit=crop&w=600&q=80" alt="Vase artisanal">
+        <h3>Vase artisanal</h3>
+        <p>Pièce unique faite à la main pour sublimer votre intérieur.</p>
+        <span class="price">59 €</span>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598300056394-4f7cbe3cc6bb?auto=format&fit=crop&w=600&q=80" alt="Miroir mural">
+        <h3>Miroir mural</h3>
+        <p>Apporte lumière et élégance à votre pièce.</p>
+        <span class="price">149 €</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Ma Boutique de Meubles</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("hamburger").onclick = () => {
+      document.getElementById("navMenu").classList.toggle("active");
+    };
+  </script>
+</body>
+</html>

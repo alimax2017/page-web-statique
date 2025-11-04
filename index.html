@@ -10,9 +10,16 @@
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="brand">🪑 Ma Boutique de Meubles</h1>
-      <nav class="nav">
-        <a href="#catalog">Catalog</a>
-        <a href="#about">À propos</a>
+      <!-- Hamburger button -->
+      <button class="hamburger" id="hamburger">
+        ☰
+      </button>
+      <nav class="nav" id="navMenu">
+        <a href="#salon">Salon</a>
+        <a href="#chambre">Chambre</a>
+        <a href="#cuisine">Cuisine</a>
+        <a href="#jardin">Jardin</a>
+        <a href="#decoration">Décoration</a>
         <button id="cartBtn" class="cart-btn">Panier (<span id="cart-count">0</span>)</button>
       </nav>
     </div>
@@ -27,7 +34,7 @@
           <a href="#catalog" class="btn-primary">Voir le catalogue</a>
         </div>
         <div class="hero-image">
-          <img src="static/images/meuble0.JPG" alt="Salon design">
+          <img src="https://images.unsplash.com/photo-1582582494706-5b8b1da6b7b0?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8c3a7b9f0b3c7d2d9c1f2a0b6d8b1c1e" alt="Salon design">
         </div>
       </div>
     </section>
@@ -35,47 +42,7 @@
     <section id="catalog" class="container catalog">
       <h2 class="section-title">Nos Meubles</h2>
       <div class="grid" id="products">
-        <!-- Product cards (JS can also build these) -->
-        <article class="card" data-id="1" data-name="Canapé en cuir" data-price="799">
-          <img src="static/images/meuble1.jpg" alt="Canapé en cuir">
-          <div class="card-body">
-            <h3>Canapé en cuir</h3>
-            <p class="price">799 €</p>
-            <p class="desc">Canapé 3 places en cuir véritable — confort premium.</p>
-            <div class="card-actions">
-              <button class="btn-outline view-btn">Détails</button>
-              <button class="btn-primary add-btn">Ajouter au panier</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-id="2" data-name="Table en chêne" data-price="499">
-          <img src="static/images/meuble2.jpg" alt="Table en chêne">
-          <div class="card-body">
-            <h3>Table en chêne</h3>
-            <p class="price">499 €</p>
-            <p class="desc">Table familiale en bois massif, finition naturelle.</p>
-            <div class="card-actions">
-              <button class="btn-outline view-btn">Détails</button>
-              <button class="btn-primary add-btn">Ajouter au panier</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-id="3" data-name="Chaise scandinave" data-price="129">
-          <img src="static/images/meuble3.jpg" alt="Chaise scandinave">
-          <div class="card-body">
-            <h3>Chaise scandinave</h3>
-            <p class="price">129 €</p>
-            <p class="desc">Design nordique, légèreté et confort.</p>
-            <div class="card-actions">
-              <button class="btn-outline view-btn">Détails</button>
-              <button class="btn-primary add-btn">Ajouter au panier</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Ajoute d'autres cartes si besoin -->
+        <!-- tes produits ici -->
       </div>
     </section>
 
@@ -107,5 +74,13 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // JS pour le menu hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
